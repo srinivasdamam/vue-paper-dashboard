@@ -10022,7 +10022,7 @@ hr {
   font-weight: 200; }
   .sidebar .logo,
   .off-canvas-sidebar .logo {
-    padding-top: 40px;
+    padding: 18px 0;
     margin: 0 20px; }
     .sidebar .logo p,
     .off-canvas-sidebar .logo p {
@@ -12690,4 +12690,4 @@ textarea.form-control {
     -ms-overflow-style: -ms-autohiding-scrollbar;
     -webkit-overflow-scrolling: touch; } }
 
-/*# sourceMappingURL=app.c00a69ffbed8882b634db2f41cc2776b.css.map*/
+/*# sourceMappingURL=app.013e4b2813bc33c04b1f9d9ddbce02b7.css.map*/
