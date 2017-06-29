@@ -1,16 +1,22 @@
 <template>
   <div :class="sidebarClasses" :data-background-color="backgroundColor" :data-active-color="activeColor">
     <!--
-            Tip 1: you can change the color of the sidebar's background using: data-background-color="white | black"
+            Tip 1: you can change the color of the sidebar's background using: data-background-color="white | black | darkblue"
             Tip 2: you can change the color of the active button using the data-active-color="primary | info | success | warning | danger"
         -->
     <!-- -->
     <div class="sidebar-wrapper" id="style-3">
       <div class="logo">
         <a href="#" class="simple-text">
+            <div class="logo-img">
+                <img src="static/img/vue-logo.png" alt="">
+            </div>
           Paper Dashboard
         </a>
       </div>
+      <slot>
+
+      </slot>
       <ul :class="navClasses">
         <!--By default vue-router adds an active class to each route link. This way the links are colored when clicked-->
         <router-link v-for="(link,index) in sidebarLinks" :to="link.path" tag="li" :ref="link.name">
@@ -44,15 +50,15 @@
         type: String,
         default: 'black',
         validator: (value) => {
-          let acceptedValues = ['white', 'black']
+          let acceptedValues = ['white', 'black', 'darkblue']
           return acceptedValues.indexOf(value) !== -1
         }
       },
       activeColor: {
         type: String,
-        default: 'danger',
+        default: 'success',
         validator: (value) => {
-          let acceptedValues = ['primary', 'info', ' success', 'warning', 'danger']
+          let acceptedValues = ['primary', 'info', 'success', 'warning', 'danger']
           return acceptedValues.indexOf(value) !== -1
         }
       },
